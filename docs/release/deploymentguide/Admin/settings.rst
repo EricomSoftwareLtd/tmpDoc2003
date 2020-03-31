@@ -17,17 +17,17 @@ The available sub-sections are:
 
 *   `Files & Sanitization <settings.html#id6>`_
 
-*   `DNS <settings.html#id15>`_
+*   `DNS <settings.html#id20>`_
 
-*   `Proxy & Integration <settings.html#id16>`_
+*   `Proxy & Integration <settings.html#id21>`_
 
-*   `Content Isolation <settings.html#id21>`_
+*   `Content Isolation <settings.html#id26>`_
 
-*   `End User Options <settings.html#id22>`_
+*   `End User Options <settings.html#id27>`_
 
-*   `Dynamic Nodes <settings.html#id24>`_
+*   `Dynamic Nodes <settings.html#id29>`_
 
-*   `Restore <settings.html#id25>`_
+*   `Restore <settings.html#id30>`_
 
 
 General
