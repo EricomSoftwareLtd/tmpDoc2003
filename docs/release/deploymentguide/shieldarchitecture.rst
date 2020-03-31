@@ -95,7 +95,7 @@ This deployment is more stable and secure than the Basic option, but it does not
 **Split Mode**
 
 .. figure:: images/split.png
-	:scale: 75%
+	:scale: 55%
 	:align: center
 
 Includes one machine running the **Shield-Management** & **Shield-Proxy** components on it, referred to as **Management Cluster**. This machine should be 

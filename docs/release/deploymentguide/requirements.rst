@@ -62,7 +62,7 @@ Ericom Shield requires these ports to be open on the network:
 
 .. csv-table::
     :header: "Port", "Protocol", "From", "To", "Split", "Comment"
-    :widths: 10, 10, 10, 10, 10
+    :widths: 10, 10, 10, 10, 10, 10
     
     3128, TCP, End users, Shield Proxy, "Yes", "Inbound between End-Users and Shield"
     8443, TCP, "", Rancher, "Yes", "Inbound and between all Shield servers. Used to connect to the Rancher Administration Console and between Shield servers to Rancher server"

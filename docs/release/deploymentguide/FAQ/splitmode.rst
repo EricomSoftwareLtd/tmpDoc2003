@@ -7,7 +7,7 @@ Shield may be deployed in Split Mode, when some components are in the LAN and ot
 When this is the selected deployment, 2 clusters are created, and defined per thier location (MDZ/LAN).
 
 .. figure:: images/split.png
-	:scale: 75%
+	:scale: 55%
 	:align: center
 
 Management Cluster (referred to as Cluster A), located in the LAN, includes the Management and Proxy components.
@@ -38,7 +38,7 @@ Go to the machine running **Cluster A** and update the following yaml files:
 Final result should look like this:
 
 .. figure:: images/split1.png
-	:scale: 75%
+	:scale: 55%
 	:align: center
 
 2. In ``custom-common.yaml``, uncomment these lines (as described in the file) and update the IP to the Cluster B IP address (in the DMZ)::
@@ -49,7 +49,7 @@ Final result should look like this:
 Final result should look like this:
 
 .. figure:: images/split2.png
-	:scale: 75%
+	:scale: 55%
 	:align: center
 
 Go to the machine running **Cluster B** and update the ``custom-farm.yaml``. Uncomment these lines::
@@ -64,7 +64,7 @@ Go to the machine running **Cluster B** and update the ``custom-farm.yaml``. Unc
 Final result should look like this:
 
 .. figure:: images/split3.png
-	:scale: 75%
+	:scale: 55%
 	:align: center
 
 Ports
