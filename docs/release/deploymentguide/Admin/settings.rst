@@ -253,9 +253,9 @@ The possible options are:
 
 *   `Sasa Gate Scanner <settings.html#id8>`_
 
-*	`Opswat MetaDefender <settings.html#id9>`_ 
+*	`Opswat MetaDefender <settings.html#id12>`_ 
 
-*   `Check Point SandBlast <settings.html#id10>`_
+*   `Check Point SandBlast <settings.html#id17>`_
 
 Votiro (Default)
 ================
