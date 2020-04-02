@@ -4,12 +4,12 @@ How To Add Nodes To An Existing Cluster
 
 To add nodes to an **existing** Shield cluster that is already in production, follow these steps:
 
-Make sure to prepare the node(s) as required (detailed `here <../deployment.html#prepare-the-linux-machines>`_)
+Make sure to prepare the node(s) as required (detailed `here <../installation.html#prepare-the-server-nodes>`_)
 
 Join the node(s) to the existing cluster using the copied commaned from Rancher (as explained in the Installation process). 
 Make sure the copied command matches the node to join (**Master**/**Worker**). 
 
-Once the new nodes are added, set the labels (detailed `here <../deployment.html#set-node-labels>`_). 
+Once the new nodes are added, set the labels (detailed `here <../installation.html#set-node-labels>`_). 
 
 If the new node(s) are Management or Proxy nodes, the cluster should be redeployed for the changes to take affect. 
 

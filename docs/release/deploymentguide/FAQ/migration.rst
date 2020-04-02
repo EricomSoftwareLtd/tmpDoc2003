@@ -16,7 +16,7 @@ To migrate existing legacy systems to Shield running on Kubernetes, please follo
 
 4.  On the SFTP server, create a SSH key. For more details about SSH keys go `here <SSHKeys.html>`_.
 
-5.  Create a new Shield system. Form a new Shield Kubernetes cluster as described in `here <../deployment.html>`_. 
+5.  Create a new Shield system. Form a new Shield Kubernetes cluster as described in `here <../installtion.html>`_. 
     Additional steps are required prior to deploying Shield, so stop before deploying it.
     
 6.  On the Master machine, download the custom-management file to the current folder::
@@ -40,6 +40,6 @@ To migrate existing legacy systems to Shield running on Kubernetes, please follo
             <PRIVATE_KEY>
             ----END RSA PRIVATE KEY-----
 
-8.  Continue with the deployment instructions. The deployment will refer to the updated custom-management file. Go `here <../deployment.html#deploy-shield>`_.
+8.  Continue with the deployment instructions. The deployment will refer to the updated custom-management file. Go `here <../installtion.html#deploy-shield>`_.
         
 9.	Use Shield in the new, Kubernetes deployment.
