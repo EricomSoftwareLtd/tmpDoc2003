@@ -40,7 +40,7 @@ Browse to the location of the OVA file and select it. Click ``Next``
 4.	Enter the machines settings and change the CPU to 8 cores (minimum) or 12 cores (recommended) and the memory to 16GB (minimum).
 
 .. figure:: images/ova7.png	
-	:scale: 75%
+	:scale: 55%
 	:align: center
 
 5.	Power on the machine.
@@ -82,7 +82,7 @@ Browse to the location of the OVA file and select it. Click ``Next``
 		
 10.	Reboot the machine
 
-Repeat these steps for **each** machine in the system. 
+Repeat these steps for **EACH** machine in the system. 
 
 Prepare The Rancher Server
 ==========================
@@ -94,7 +94,8 @@ On the Linux **Rancher Server** machine, run this service::
 	sudo ./install-shield.sh -O -l -R -L shield-repo/
 
 This command will run Rancher (-R) with all the labels (-l), start to create the cluster locally and offline (-O, -L) and use the Shield repository 
-included in the OVA file. Before deploying Shield, the user will see a message with detailed explanation what to do, manually, before continuing with the process::
+included in the OVA file. Before deploying Shield, the user will see a message with a detailed explanation on several required manual 
+actions that need to be done before continuing with the process::
 
     offline mode: skipping adding Shield Repo
     notice : you are running in offline mode
@@ -106,7 +107,7 @@ included in the OVA file. Before deploying Shield, the user will see a message w
     change the value of ImagePullPolicy from 'Always' to 'Never'
     when you are done, press enter to continue the deployment
     
-Follow the instructions detailed in the message. Go to Rancher | Global | Cluster Name | System
+Follow the instructions detailed in the message. Go to ``Rancher`` | ``Global`` | ``Cluster Name`` | ``System``
 
 .. figure:: images/rancher6.png	
 	:scale: 75%
@@ -115,7 +116,7 @@ Follow the instructions detailed in the message. Go to Rancher | Global | Cluste
 Go to ``Namespace: kube-system`` (1), and select the ``metrics-server`` (2), menu on the right (3) - ``View/Edit YAML`` (4) 
 
 .. figure:: images/rancher7.png	
-	:scale: 75%
+	:scale: 55%
 	:align: center
 
 Change the ImagePullPolicy to Never and Save
@@ -124,7 +125,7 @@ Change the ImagePullPolicy to Never and Save
 	:scale: 75%
 	:align: center
 
-Wait for the ``metrics-server`` to restart itself and once turns green it is ready and installation can be continued. 
+Wait for the ``metrics-server`` container to restart itself and once it turns green, it is ready.  
 Go to the rancher server and press ``Enter`` to continue with the installation.
 
 Prepare The Server Nodes

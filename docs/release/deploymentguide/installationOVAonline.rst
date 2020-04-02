@@ -40,7 +40,7 @@ Browse to the location of the OVA file and select it. Click ``Next``
 4.	Enter the machines settings and change the CPU to 8 cores (minimum) or 12 cores (recommended) and the memory to 16GB (minimum).
 
 .. figure:: images/ova7.png	
-	:scale: 75%
+	:scale: 55%
 	:align: center
 
 5.	Power on the machine.
@@ -82,7 +82,7 @@ Browse to the location of the OVA file and select it. Click ``Next``
 		
 10.	Reboot the machine
 
-Repeat these steps for **each** machine in the system. 
+Repeat these steps for **EACH** machine in the system. 
 
 Prepare The Rancher Server
 ==========================

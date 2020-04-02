@@ -58,21 +58,21 @@ Open Rancher at https://RancherServerIPAddress:8443 (using the Rancher Server IP
 Go To the cluster and select ``Edit`` 
 
 .. figure:: images/rancher1.png
-	:scale: 75%
+	:scale: 55%
 	:align: center
 
 Scroll down to the bottom of the page, mark the required checkboxes (according to the planned deployment) and copy the command on the bottom 
 (using the **Copy to Clipboard** option in the right).
 
 .. figure:: images/rancher2.png
-	:scale: 75%
+	:scale: 70%
 	:align: center
 
-Run the copied command on EACH server node to join it to the cluster. Make sure the copied command matches the 
+Run the copied command on **EACH** server node to join it to the cluster. Make sure the copied command matches the 
 node to join (**Master**/**Worker**). Follow the node joining by clicking on ``Nodes`` in the cluster menu.
 
 Wait until the process is finished. After the node is joined to the cluster, a green message appears at the bottom of the page. 
-Repeat this process per each node until the cluster is complete. Click ``Done``.
+Repeat this process per each node until the cluster is complete. 
 
 Set Node Labels
 ---------------
