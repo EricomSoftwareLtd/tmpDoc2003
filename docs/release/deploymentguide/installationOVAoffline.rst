@@ -128,18 +128,4 @@ Change the ImagePullPolicy to Never and Save
 Wait for the ``metrics-server`` container to restart itself and once it turns green, it is ready.  
 Go to the rancher server and press ``Enter`` to continue with the installation.
 
-Prepare The Server Nodes
-========================
-
-Each server node that takes part in the Shield cluster must be prepared before creating the cluster.
-From the Linux **Rancher Server** machine run::
-
-	./shield-prepare-servers [-u <USER>] <SERVERIPADDRESSES>
-
-<SERVERIPADDRESSES> represents the IP addresses of all the server nodes (that will form the cluster). Multiple IP addresses may be entered, separated by a space (" ").
-
-E.g.::
-
-	./shield-prepare-servers -u ericom xx.xx.xx.xx yy.yy.yy.yy
-
 Now that all the Server Machines are ready, continue with the installation steps detailed `here <installation.html#connect-the-machines-to-the-cluster-master>`_.
