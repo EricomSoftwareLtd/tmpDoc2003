@@ -93,4 +93,6 @@ On the Linux **Rancher Server** machine, run this service::
 
 	sudo ./install-shield.sh -R -l -p <PASSWORD>
 
+This command will run Rancher (-R) with all the labels (-l) and use the latest (online) Shield repository.
+
 Now that all the Server Machines are ready, continue with the installation steps detailed `here <installation.html#connect-the-machines-to-the-cluster-master>`_.

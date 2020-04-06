@@ -18,6 +18,8 @@ On the Linux **Rancher Server** machine, download and run this service::
 	chmod +x install-shield.sh
 	sudo ./install-shield.sh -R -l -p <PASSWORD>
 
+This command will run Rancher (-R) with all the labels (-l) and use the latest (online) Shield repository.
+
 Prepare The Server Nodes
 ========================
 
@@ -36,19 +38,7 @@ E.g.::
 
 .. note:: The Kernel may be updated during this process (if required).
 
-Now, perform these steps on ALL the machines in the cluster (both **Rancher Server** machine and server nodes)::
-
-1. Add current user to the docker group::
-
-	sudo usermod -aG docker "$USER"
-
-2. Logout and login again.
-
-3. Verify that Docker is installed properly::
-
-	docker version
-
-4. All the machines should be synchronized. Configure the NTP (Network Time Protocol) and the timezone on the machine.
+All the machines should be synchronized. Configure the NTP (Network Time Protocol) and the timezone on the machine on ALL the machines in the cluster.
 
 Connect The Machines To The Cluster Master
 ==========================================
