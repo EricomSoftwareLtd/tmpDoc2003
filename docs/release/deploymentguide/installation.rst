@@ -125,7 +125,7 @@ Run the install-shield service again::
 Backup
 ------
 
-Set up the backup path and storage account. For more details go `here <FAQ/backuprestore.html>`_.
+Set up the backup path and storage account. For more details go `here <backuprestore.html>`_.
 
 Split Mode
 ----------
