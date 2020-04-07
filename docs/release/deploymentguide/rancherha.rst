@@ -21,14 +21,14 @@ E.g. a Shield system of 8 nodes (3 managers, 5 browser farm) with RancherHA will
 Software Requirements
 ---------------------
 
-*   Linux Ubuntu Server 18.04 (64-bit, not workstation) or CentOS 7.6-1810 (x86) with Kernel 4.4
+*   Linux Ubuntu Server 18.04 (64-bit, not workstation) or CentOS 7.7-1908 (x86) with Kernel 4.4
 *   Has a fixed IP Address
 *   Has a unique hostname
 *   Has the **same** user <USER> and password as the other nodes
 *   Has the same timezone (as other machines in the system)
 *   Has SSH server installed
 
-Shield nodes should have these `requirements <requirements.html>`.
+Shield nodes should have these `requirements <requirements.html>`_.
 The other nodes (LB and administrator workstation) should have the minimum amount of memory and CPU resources.
 
 Make sure that a local, accessible, DNS server exists for this system.
@@ -74,7 +74,8 @@ Configure Administrator Workstation
 
     Replace the <USER> with the user that matches ALL nodes. Replace the <SERVERIPADDRESSES> with the list of IP addresses of ALL nodes in the system.
 
-*   Make sure all the nodes are accessible via SSH under the <USER> account from the WS, using SSH public keys. Run the following to generate a key pair and distribute the public key across all nodes. For more info go `here <http://manpages.ubuntu.com/manpages/bionic/man1/ssh-copy-id.1.html>`_::
+
+*   Make sure all the nodes are accessible via SSH under the <USER> account from the WS, using SSH public keys. Run the following to generate a key pair and distribute the public key across all nodes (must be done each node separately). For more info go `here <http://manpages.ubuntu.com/manpages/bionic/man1/ssh-copy-id.1.html>`_::
 
         ssh-keygen 
         ssh-copy-id <IPADDRESSNODE1>
@@ -90,7 +91,7 @@ Configure Administrator Workstation
 
 *   Certificates
 
-    In case of existing CA certificate and key, save these as cacerts.pem and cacerts.key respectively (under ~/Shield/Kube/scripts). 
+    In case of existing CA certificate and key, save these as ``cacerts.pem`` and ``cacerts.key`` respectively (under ``~/Shield/Kube/scripts``). 
     Else, create a new CA certificate and key to be used by the Rancher cluster, run::
     
         cd RKE/
@@ -107,7 +108,7 @@ Configure Administrator Workstation
 
     The configuration of the entire system is defined in the ``rancher-cluster.yml`` file. This file is edited to include the system configuration and then later used to deploy it.
 
-    LB nodes are marked with **"system-role/ingress-rancher: accept"** label. Copy the related section for each LB node. E.g. for 2 nodes, the file should include:
+    LB nodes are marked with ``system-role/ingress-rancher: accept`` label. Copy the related section for each LB node. E.g. for 2 nodes, the file should include:
 
     .. figure:: images/ranchercluster1.png	
 	:scale: 75%
@@ -115,7 +116,8 @@ Configure Administrator Workstation
 
     Update the user: <USER> - use the user mentioned above. 
 
-    **Shield Manager** nodes are marked with role: ``[controlplane,worker,etcd]``. **Worker** nodes are marked with role: ``[worker]``. 
+    **Shield Manager** nodes are marked with role: ``[controlplane,worker,etcd]``. 
+    **Worker** nodes are marked with role: ``[worker]``. 
     
     Modify the file to include references to all the Shield nodes in the system. Match the labels/shield-role (e.g. management, proxy, elk, farm-services, remote-browsers) per each 
     node, as per the planned Shield deployment. E.g.:
@@ -126,7 +128,7 @@ Configure Administrator Workstation
 
     Change the ``kubernetes_version`` to be **v1.17.4-rancher1-2**. 
     
-    In case users have servers with multiple network interface cards, it is required to specify the interface name that was used for communication on the local network, 
+    In case users have servers with multiple network interface cards, it is required to specify the **interface name** that was used for communication on the local network, 
     in the flannel_iface (under network/options)
 
     .. figure:: images/ranchercluster3.png	
@@ -134,6 +136,7 @@ Configure Administrator Workstation
 	:align: center
     
     Save the changes
+    
 
 *   Build and deploy the Rancher cluster. Run::
 

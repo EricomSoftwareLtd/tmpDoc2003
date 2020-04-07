@@ -16,7 +16,6 @@ How To - Quick Guide
 	FAQ/techpreview
 	FAQ/specificversion
 	FAQ/SSHKeys
-	FAQ/rancherha
 	FAQ/domainlists
 	FAQ/advanceAuth
 	FAQ/advanceCDR
