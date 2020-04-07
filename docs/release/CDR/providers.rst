@@ -11,4 +11,5 @@ Shield integrates with the following CDR Providers:
 		
 	../CDR/votiro
     ../CDR/sasa
+    ../CDR/opswat
     ../CDR/checkpoint

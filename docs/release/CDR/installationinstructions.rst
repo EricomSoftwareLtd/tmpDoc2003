@@ -36,7 +36,7 @@ Shield Versions & Recommended CDR Versions
         :header: "Shield Verion", "CDR Version"
         :widths: 10, 10
 
-        Rel-20.01.2/Rel-19.12.1/Rel-19.11, `v8.3 <https://download.ericom.com/public/folder/NKVCccudNkej3xGcJj3KUg/8.3>`_
+        Rel-20.03/Rel-20.01.2/Rel-19.12.1, `v8.3 <https://download.ericom.com/public/folder/NKVCccudNkej3xGcJj3KUg/8.3>`_
           
     
 *   Go to the selected version download folder and download **all** files locally.
