@@ -95,4 +95,4 @@ On the Linux **Rancher Server** machine, run this service::
 
 This command will run Rancher (-R) with all the labels (-l) and use the latest (online) Shield repository.
 
-Now that all the Server Machines are ready, continue with the installation steps detailed `here <installation.html#connect-the-machines-to-the-cluster-master>`_.
+Now that all the Server Machines are ready, continue with the installation steps detailed `here <installation.html#connect-the-server-nodes-to-the-cluster-master>`_.

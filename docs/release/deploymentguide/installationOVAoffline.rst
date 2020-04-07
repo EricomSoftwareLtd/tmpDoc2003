@@ -128,4 +128,4 @@ Change the ImagePullPolicy to Never and Save
 Wait for the ``metrics-server`` container to restart itself and once it turns green, it is ready.  
 Go to the rancher server and press ``Enter`` to continue with the installation.
 
-Now that all the Server Machines are ready, continue with the installation steps detailed `here <installation.html#connect-the-machines-to-the-cluster-master>`_.
+Now that all the Server Machines are ready, continue with the installation steps detailed `here <installation.html#connect-the-server-nodes-to-the-cluster-master>`_.

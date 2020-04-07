@@ -58,4 +58,6 @@ To delete a named policy which is defined as ``Default``, first define another n
 To **edit** an entry in the Named Policies table, click the desired entry (one single click). The row is now editable and can be modified. 
 After completing all required changes, click somewhere else **within** the table. The row is no longer editable, and the changes are committed.
 
-.. note:: For Sasa Gate Scanner - provider named policy must be a numeric value that matches the named policy ID.
+When using **Sasa Gate Scanner** - the ``Provider Named Policy`` must be a numeric value that matches the named policy ID.
+
+When using **Opswat MetaDefender** - there is no build-in default policy. A specific rule (created in Opswat UI) must be mapped. Edit the default entry, and set the external rule name in the Provider Named Policy column.

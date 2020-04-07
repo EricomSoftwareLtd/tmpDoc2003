@@ -40,8 +40,8 @@ E.g.::
 
 All the machines should be synchronized. Configure the NTP (Network Time Protocol) and the timezone on the machine on ALL the machines in the cluster.
 
-Connect The Machines To The Cluster Master
-==========================================
+Connect The Server Nodes To The Cluster Master
+==============================================
 
 Open Rancher at https://RancherServerIPAddress:8443 (using the Rancher Server IP address). 
 
