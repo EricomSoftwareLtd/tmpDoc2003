@@ -169,4 +169,4 @@ as needed, save it and run::
 
     ./0_rke_up.sh
 
-The new configuration is now applied to the cluster, and the cluster is updated.
+The new configuration is now applied to the cluster and the cluster is updated.
