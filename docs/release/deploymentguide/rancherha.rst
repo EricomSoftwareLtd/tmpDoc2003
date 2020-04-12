@@ -114,9 +114,9 @@ The configuration of the entire system is defined in the ``rancher-cluster.yml``
 
 LB nodes are marked with ``system-role/ingress-rancher: accept`` label. Copy the related section for each LB node. E.g. for 2 nodes, the file should include:
 
-.. figure:: images/ranchercluster1.png	
-:scale: 75%
-:align: center
+.. figure:: images/ranchercluster1.png
+    :scale: 75%
+    :align: center
 
 Update the user: <USER> - use the user mentioned above. 
 
@@ -126,18 +126,18 @@ Update the user: <USER> - use the user mentioned above.
 Modify the file to include references to all the Shield nodes in the system. Match the labels/shield-role (e.g. management, proxy, elk, farm-services, remote-browsers) per each 
 node, as per the planned Shield deployment. E.g.:
 
-.. figure:: images/ranchercluster2.png	
-:scale: 75%
-:align: center
+.. figure:: images/ranchercluster2.png
+    :scale: 75%
+    :align: center
 
 Change the ``kubernetes_version`` to be **v1.17.4-rancher1-2**. 
     
 In case users have servers with multiple network interface cards, it is required to specify the **interface name** that was used for communication on the local network, 
 in the flannel_iface (under network/options)
 
-.. figure:: images/ranchercluster3.png	
-:scale: 75%
-:align: center
+.. figure:: images/ranchercluster3.png
+    :scale: 75%
+    :align: center
     
 Save the changes.
     
