@@ -89,20 +89,21 @@ Configure Administrator Workstation
 
         ssh_key_path: <path>/id_rsa
 
+*   DNS
+
+    Create a FQDN record in the DNS server to point to the LB nodes. A single record pointing to all LB nodes in the system. 
+    Edit the ``common`` file - Set the RANCHER_LB_HOSTNAME to the FQDN Record
+
 *   Certificates
 
-    In case of existing CA certificate and key, save these as ``cacerts.pem`` and ``cacerts.key`` respectively (under ``~/Shield/Kube/scripts``). 
-    Else, create a new CA certificate and key to be used by the Rancher cluster, run::
+    To use **existing** CA certificate (or chain of certificates) and key, go to ``~/Shield/Kube/scripts`` and save these as ``cacerts.pem`` and ``cacerts.key`` respectively. 
+    In addition, **generate** a server certificate for the FQDN Record and save it, along with the matching private key, in the same directory under the names ``cert.crt`` and ``cert.key`` respectively. 
+    
+    In case there are no existing CA certificates, create a **new** CA certificate and key to be used by the Rancher cluster, run::
     
         cd RKE/
         ./generate_ca.sh
         ./generate_cert.sh 
-
-*   DNS
-
-    Create a record in the DNS server to point to the LB nodes. Edit the ``common`` file - Set the RANCHER_LB_HOSTNAME with the <FQDNRecord>
-
-    .. note:: The FQDNRecord is a single record pointing to all LB nodes (2 or more)
 
 *   Update Configuration File
 
