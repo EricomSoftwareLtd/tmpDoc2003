@@ -33,7 +33,7 @@ Log into the Fortigate Admin Console.
 Go to ``System | Feature Visibility | Explicit Proxy`` and enable it
 
 .. figure:: images/Fortigate1.png	
-	:scale: 75%
+	:scale: 55%
 	:align: center
 
 Explicit Proxy setting will now appear under ``Network``
@@ -66,8 +66,8 @@ Create a new **Web Proxy Forwarding Server**:
 *	Port: Port of the Ericom Shield proxy server (3128)
 *	Server Down Action: Block
 *	Health Monitor: Enable
-*	Health Monitor site: http://<your-server-address>:30443//api/v1/browsersSessionsInfo/
-*	Alternate Health Monitor site: http://<your-server-address>/shield-stats
+*	Health Monitor site: http://<SERVERIPADDRESS>:30443//api/v1/browsersSessionsInfo/
+*	Alternate Health Monitor site: http://<SERVERIPADDRESS>/shield-stats
 *	Click OK
 
 .. note:: Server Down Action = Block, means that if Shield is down, the connection to the internet is blocked.
@@ -131,11 +131,11 @@ web forwarding server is not available. To edit the block page in FortiGate, go 
 i.e., URL Block Page, and edit the source code.
 
 .. figure:: images/Fortigate9.png	
-	:scale: 75%
+	:scale: 55%
 	:align: center
 
 Add the line: 
-Click here to browse the URL via isolation: <a href="https://Shield-server-address:30443/?url=https://%%URL%%">Isolate&user=%%SOURCE_IP%%<a/>
+Click here to browse the URL via isolation: <a href="https://<SERVERIPADDRESS>:30443/?url=https://%%URL%%">Isolate&user=%%SOURCE_IP%%<a/>
 
 The “url=” parameter must be lower-case.
 
