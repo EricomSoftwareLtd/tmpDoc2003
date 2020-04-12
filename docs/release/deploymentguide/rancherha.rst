@@ -89,81 +89,92 @@ Configure Administrator Workstation
 
         ssh_key_path: <path>/id_rsa
 
-*   DNS
+DNS
+---
 
-    Create a FQDN record in the DNS server to point to the LB nodes. A single record pointing to all LB nodes in the system. 
-    Edit the ``common`` file - Set the RANCHER_LB_HOSTNAME to the FQDN Record
+Create a FQDN record in the DNS server to point to the LB nodes. A single record pointing to all LB nodes in the system. 
+Edit the ``common`` file - Set the RANCHER_LB_HOSTNAME to the FQDN Record
 
-*   Certificates
+Certificates
+------------
 
-    To use **existing** CA certificate (or chain of certificates) and key, go to ``~/Shield/Kube/scripts`` and save these as ``cacerts.pem`` and ``cacerts.key`` respectively. 
-    In addition, **generate** a server certificate for the FQDN Record and save it, along with the matching private key, in the same directory under the names ``cert.crt`` and ``cert.key`` respectively. 
+To use **existing** CA certificate (or chain of certificates) and key, go to ``~/Shield/Kube/scripts`` and save these as ``cacerts.pem`` and ``cacerts.key`` respectively. 
+In addition, **generate** a server certificate for the FQDN Record and save it, along with the matching private key, in the same directory under the names ``cert.crt`` and ``cert.key`` respectively. 
     
-    In case there are no existing CA certificates, create a **new** CA certificate and key to be used by the Rancher cluster, run::
+In case there are no existing CA certificates, create a **new** CA certificate and key to be used by the Rancher cluster, run::
     
-        cd RKE/
-        ./generate_ca.sh
-        ./generate_cert.sh 
+    cd RKE/
+    ./generate_ca.sh
+    ./generate_cert.sh 
 
-*   Update Configuration File
+Configuration File
+------------------
 
-    The configuration of the entire system is defined in the ``rancher-cluster.yml`` file. This file is edited to include the system configuration and then later used to deploy it.
+The configuration of the entire system is defined in the ``rancher-cluster.yml`` file. This file is edited to include the system configuration and then later used to deploy it.
 
-    LB nodes are marked with ``system-role/ingress-rancher: accept`` label. Copy the related section for each LB node. E.g. for 2 nodes, the file should include:
+LB nodes are marked with ``system-role/ingress-rancher: accept`` label. Copy the related section for each LB node. E.g. for 2 nodes, the file should include:
 
-    .. figure:: images/ranchercluster1.png	
-	:scale: 75%
-	:align: center
+.. figure:: images/ranchercluster1.png	
+:scale: 75%
+:align: center
 
-    Update the user: <USER> - use the user mentioned above. 
+Update the user: <USER> - use the user mentioned above. 
 
-    **Shield Manager** nodes are marked with role: ``[controlplane,worker,etcd]``. 
-    **Worker** nodes are marked with role: ``[worker]``. 
+**Shield Manager** nodes are marked with role: ``[controlplane,worker,etcd]``. 
+**Worker** nodes are marked with role: ``[worker]``. 
     
-    Modify the file to include references to all the Shield nodes in the system. Match the labels/shield-role (e.g. management, proxy, elk, farm-services, remote-browsers) per each 
-    node, as per the planned Shield deployment. E.g.:
+Modify the file to include references to all the Shield nodes in the system. Match the labels/shield-role (e.g. management, proxy, elk, farm-services, remote-browsers) per each 
+node, as per the planned Shield deployment. E.g.:
 
-    .. figure:: images/ranchercluster2.png	
-	:scale: 75%
-	:align: center
+.. figure:: images/ranchercluster2.png	
+:scale: 75%
+:align: center
 
-    Change the ``kubernetes_version`` to be **v1.17.4-rancher1-2**. 
+Change the ``kubernetes_version`` to be **v1.17.4-rancher1-2**. 
     
-    In case users have servers with multiple network interface cards, it is required to specify the **interface name** that was used for communication on the local network, 
-    in the flannel_iface (under network/options)
+In case users have servers with multiple network interface cards, it is required to specify the **interface name** that was used for communication on the local network, 
+in the flannel_iface (under network/options)
 
-    .. figure:: images/ranchercluster3.png	
-	:scale: 75%
-	:align: center
+.. figure:: images/ranchercluster3.png	
+:scale: 75%
+:align: center
     
-    Save the changes
+Save the changes.
     
 
-*   Build and deploy the Rancher cluster. Run::
+Deploy Rancher
+--------------
 
-        ./0_rke_up.sh
-        ./1_install_tiller.sh
-        ./2_deploy_rancher.sh
+Build and deploy the Rancher cluster. Run::
 
-    Make sure there are no fatal errors and wait for the Rancher to be deployed successfully. 
+    ./0_rke_up.sh
+    ./1_install_tiller.sh
+    ./2_deploy_rancher.sh
+
+Make sure there are no fatal errors and wait for the Rancher to be deployed successfully. 
     
-    .. note:: certain errors may appear, e.g. “Error from server (NotFound): secrets "tls-ca" not found”. These may be ignored.
+.. note:: certain errors may appear, e.g. “Error from server (NotFound): secrets "tls-ca" not found”. These may be ignored.
 
-*   Open Rancher UI - go to ``https://<RANCHER_LB_HOSTNAME>:8443`` in your browser. Follow the instructions (e.g. set password). Make sure Rancher works with no errors, that 
-    ``local`` cluster is imported and functions with no errors (may take a short while to be ready).
+Open Rancher UI - go to ``https://<RANCHER_LB_HOSTNAME>:8443`` in your browser. Follow the instructions (e.g. set password). Make sure Rancher works with no errors, that 
+``local`` cluster is imported and functions with no errors (may take a short while to be ready).
 
-*   Copy the config file to the proper location:, under ``.kube``::
+Copy the config file to the proper location:, under ``.kube``::
 
-        cp kube_config_rancher-cluster.yml ~/.kube/config
+    cp kube_config_rancher-cluster.yml ~/.kube/config
 
-*   Proceed to regular Shield installation procedure, run::
 
-        ./add-shield-repo.sh -p <password>
-        ./deploy-shield.sh
+Deploy Shield
+-------------
 
-    In Rancher, move the namespaces to be under ``Default`` project.
+Proceed to regular Shield installation procedure, run::
+
+    ./add-shield-repo.sh -p <password>
+    ./deploy-shield.sh
+
+In Rancher, move the namespaces to be under ``Default`` project.
     
-    Shield is now installed with Rancher HA
+Shield is now installed with Rancher HA
+
 
 Update Existing Cluster
 =======================
