@@ -70,7 +70,8 @@ Use Cases
 Shield can be deployed in various deployments, ranging from a single machine to multi machines to multi zones deployments.
 Here are some general use cases for Shield deployments:
 
-**Basic**
+Basic
+-----
 
 .. figure:: images/basic.png
 	:scale: 75%
@@ -79,7 +80,8 @@ Here are some general use cases for Shield deployments:
 All Shield components are deployed on a single machine. 
 This is the most basic option, used for quick evaluation of Shield. 
 
-**Evaluation**
+Evaluation
+----------
 
 .. figure:: images/evaluation.png
 	:scale: 75%
@@ -92,7 +94,8 @@ be placed in the DMZ.
 This is the **recommended** deployment for **Evaluation**. 
 This deployment is more stable and secure than the Basic option, but it does not support High Availability (HA).
 
-**Split Mode**
+Split Mode
+----------
 
 .. figure:: images/split.png
 	:scale: 55%
@@ -102,7 +105,8 @@ Includes one machine running the **Shield-Management** & **Shield-Proxy** compon
 placed in the Domain. A second machine, running the **Shield-Log**, **Farm Services** & **Browser Farm** components on it, referred to as 
 **Farm Cluster**. This machine should be placed in the DMZ.
 
-**Small Deployments (HA)**
+Small Deployments (HA)
+----------------------
 
 .. figure:: images/smalldeployment.png
 	:scale: 55%
@@ -112,7 +116,8 @@ Includes 3 machines. Each machine includes ALL of Shield components on it.
 This deployment is suitable for small scale production environments, as it is stable and ensures HA. 
 However, since all the machines are placed in the Domain, it lacks the security of the DMZ.
 
-**Production**
+Production
+----------
 
 .. figure:: images/production.png
 	:scale: 55%

@@ -16,7 +16,9 @@ The number of nodes required for a HA cluster, is the number of Shield servers (
 
 <Total#ofNodes> = <#ofShieldServers> + <2LBServers> + <1AdminWS>
 
-E.g. a Shield system of 8 nodes (3 managers, 5 browser farm) with RancherHA will require 11 nodes.
+E.g. a Shield system of 5 nodes (3 managers, 2 browser farm) with RancherHA will require 8 nodes.
+
+.. note:: Please see the Shield Architecture page, for the `recommended deployment <shieldarchitecture.html#production>`_.
 
 Software Requirements
 ---------------------
@@ -98,14 +100,16 @@ Edit the ``common`` file - Set the RANCHER_LB_HOSTNAME to the FQDN Record
 Certificates
 ------------
 
-To use **existing** CA certificate (or chain of certificates) and key, go to ``~/Shield/Kube/scripts`` and save these as ``cacerts.pem`` and ``cacerts.key`` respectively. 
-In addition, **generate** a server certificate for the FQDN Record and save it, along with the matching private key, in the same directory under the names ``cert.crt`` and ``cert.key`` respectively. 
-    
-In case there are no existing CA certificates, create a **new** CA certificate and key to be used by the Rancher cluster, run::
+To use an **existing** CA certificate (or chain of certificates), go to ``~/Shield/Kube/scripts`` and save it as ``cacerts.pem``.
+
+In addition, **generate** a server certificate for the FQDN Record and save it, along with the matching private key, in the same directory under the names 
+``cert.crt`` and ``cert.key`` respectively. 
+
+In case there are **no** existing CA certificates, create a **new** CA certificate and a new server certificate (plus its matching keys respectively) to be used by the Rancher cluster, run::
     
     cd RKE/
-    ./generate_ca.sh
-    ./generate_cert.sh 
+    ./generate_ca.sh    (creates a new CA certificate & key)
+    ./generate_cert.sh  (creates a new server certificate & key)
 
 Configuration File
 ------------------
