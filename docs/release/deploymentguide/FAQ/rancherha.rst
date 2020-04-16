@@ -18,7 +18,7 @@ The number of nodes required for a HA cluster, is the number of Shield servers (
 
 E.g. a Shield system of 5 nodes (3 managers, 2 browser farm) with RancherHA will require 8 nodes.
 
-.. note:: Please see the Shield Architecture page, for the `recommended deployment <shieldarchitecture.html#production>`_.
+.. note:: Please see the Shield Architecture page, for the `recommended deployment <../shieldarchitecture.html#production>`_.
 
 Software Requirements
 ---------------------
@@ -30,7 +30,7 @@ Software Requirements
 *   Has the same timezone (as other machines in the system)
 *   Has SSH server installed
 
-Shield nodes should have these `requirements <requirements.html>`_.
+Shield nodes should have these `requirements <../requirements.html>`_.
 The other nodes (LB and administrator workstation) should have the minimum amount of memory and CPU resources.
 
 Make sure that a local, accessible, DNS server exists for this system.
@@ -105,7 +105,7 @@ To use an **existing** CA certificate (or chain of certificates), go to ``~/Shie
 In addition, **generate** a server certificate for the FQDN Record and save it, along with the matching private key, in the same directory under the names 
 ``cert.crt`` and ``cert.key`` respectively. 
 
-In case there are **no** existing CA certificates, create a **new** CA certificate and a new server certificate (plus its matching keys respectively) to be used by the Rancher cluster, run::
+In case there are **no** existing CA certificates, create a **new** CA certificate and a **new** server certificate (plus its matching keys respectively) to be used by the Rancher cluster, run::
     
     cd RKE/
     ./generate_ca.sh    (creates a new CA certificate & key)

@@ -12,6 +12,7 @@ How To - Quick Guide
 	FAQ/proxyport
 	FAQ/increasepods
 	FAQ/migration
+	FAQ/rancherha
 	FAQ/dockerlogs
 	FAQ/addnodestocluster
 	FAQ/centos
