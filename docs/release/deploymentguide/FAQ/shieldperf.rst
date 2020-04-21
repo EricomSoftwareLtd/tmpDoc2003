@@ -23,7 +23,7 @@ It is recommended to run the analyzer from two different end users computer - on
 To use the Page Load Analyzer, open a Shield browser and go to http://shield-perf/. Enter the URL to analyze and click “Go”. After the page is analyzed, the results are displayed:
 
 .. figure:: images/shieldperf1.png	
-	:scale: 55%
+	:scale: 75%
 	:align: center
 
 Reading The Analyzer Results
@@ -73,12 +73,11 @@ Remote Browser to Internet
 
 The second segment is between the Remote Browser and the Internet. It includes the following events:
 
-*   Got Policy Info & Navigating to URL – both events are received the first time that the remote browser 
-renders the web page.
-*   Client_firstImageRecieved - an initial image appears in the remote page
-*   Client_domReadyEventReceived - the remote browser got Dom Ready event
-*   Client_mainFrameLoadedEventReceived - when all page resources are received
-*   Shield server page fully loaded - the page is completely loaded
+*   Got Policy Info & Navigating to URL – both events are received the first time that the remote browser renders the web page
+*	Client_firstImageRecieved - an initial image appears in the remote page
+*	Client_domReadyEventReceived - the remote browser got Dom Ready event
+*	Client_mainFrameLoadedEventReceived - when all page resources are received
+*	Shield server page fully loaded - the page is completely loaded
 
 If this segment is slow (total duration is longer than 10 sec), it may be due to one of the following options:
 
@@ -90,7 +89,7 @@ SSL inspection or firewall.
 **Ads**
 
 Ads may cause the page to load slowly (up to 30%-50% slower). To avoid this, make sure that ad blocking service is 
-enabled. To verify that ad blocking is enabled, use this site: https://ads-blocker.com/testing/
+enabled. To verify that ad blocking is enabled, use this `site <https://ads-blocker.com/testing/>`_.
 
 **High CPU usage on the browser nodes** 
 
@@ -117,7 +116,7 @@ The available information is:
 	:scale: 55%
 	:align: center
 
-..note:: The color of the different events is marked according to the relevant segment in the analyzer results. 
+.. note:: The color of the different events is marked according to the relevant segment in the analyzer results. 
 
 For example, this report can be used to detect slow connections or slow machines (due to incorrect configuration). 
 Filter the results by a specific duration/interval field, one that would indicate a slow connection. 
