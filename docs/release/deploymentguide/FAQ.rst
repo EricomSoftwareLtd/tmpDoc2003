@@ -25,5 +25,6 @@ How To - Quick Guide
 	FAQ/namedpolicies
 	FAQ/enduser
 	FAQ/externalsyslog
+	FAQ/shieldperf
 	FAQ/iemode
 	FAQ/knownissues
