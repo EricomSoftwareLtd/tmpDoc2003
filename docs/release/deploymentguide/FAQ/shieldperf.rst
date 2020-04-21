@@ -121,5 +121,5 @@ The available information is:
 For example, this report can be used to detect slow connections or slow machines (due to incorrect configuration). 
 Filter the results by a specific duration/interval field, one that would indicate a slow connection. 
 
-For example, filter according to **firstImageSentTime.numeric** greater than 2500 (indicated slow loading), with a **specific** clientIP – the 
-filtered results will indicate which machines may have problematic configurations.
+For example, filter the results according to **firstImageSentTime.numeric** greater than 2500 (indicates slow loading), 
+and with a **specific** clientIP. The results will indicate which machines are slow and may have problematic configurations.
