@@ -24,7 +24,6 @@ How To - Quick Guide
 	FAQ/advanceCDR
 	FAQ/namedpolicies
 	FAQ/enduser
-	FAQ/externalsyslog
 	FAQ/shieldperf
 	FAQ/iemode
 	FAQ/knownissues
