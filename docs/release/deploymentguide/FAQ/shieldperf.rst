@@ -10,7 +10,7 @@ The events are executed and received as follows:
 	:scale: 55%
 	:align: center
 
-..note:: In the majority of cases, this is the sequence of events. Still, since it is an *array* of 
+.. note:: In the majority of cases, this is the sequence of events. Still, since it is an *array* of 
 events, the order may vary a bit (e.g. the dom ready event is received after the page is fully loaded). This has no special 
 affect over the analyzer results and may be ignored. 
 
