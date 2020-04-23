@@ -116,7 +116,7 @@ Go to ``Policy & Objects | Policy Proxy`` and create a new Forward proxy rule:
 *	Select the Ericom Shield Server
 *	Click OK to save.
 
-..note:: The Source Address should be the group of machines or users that this policy will apply to. For example, apply a policy for a specified group of machines 
+.. note:: The Source Address should be the group of machines or users that this policy will apply to. For example, apply a policy for a specified group of machines 
 that will be forwarded to the Shield Server, and another policy that bypasses Shield and only uses the FortiGate proxy. 
 
 .. figure:: images/Fortigate8.png	

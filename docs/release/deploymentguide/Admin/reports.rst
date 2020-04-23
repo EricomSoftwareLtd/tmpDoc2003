@@ -34,7 +34,7 @@ The results are retrieved. A **Search** option is available and also export to C
 	:scale: 40%
 	:align: center
 
-..note:: Some of the reports are displayed in the previous view, which includes the Kibana infrastructure.
+.. note:: Some of the reports are displayed in the previous view, which includes the Kibana infrastructure.
 
 Click the ``Advanced`` link to open Kibana in a new tab, for an enhanced view of system logs.
 
