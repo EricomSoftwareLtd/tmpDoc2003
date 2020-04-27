@@ -2,7 +2,7 @@
 Machine Preparation
 *******************
 
-As stated in the `Requirements </requirements.html#software-requirements>`, all machines in the Shield system should have:
+As stated in the `Requirements <requirements.html#software-requirements>`, all machines in the Shield system should have:
 
 *   A fixed IP Address
 *   A unique hostname
