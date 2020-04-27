@@ -101,6 +101,12 @@ Run the install-shield service a second time, to complete the Shield installatio
 
 	sudo ./install-shield.sh -p <PASSWORD>
 
+In case this is an **Offline** installation, run the command with these parameters::
+
+	sudo ./install-shield.sh -O -L shield-repo/
+
+.. note:: Please ignore the comment issued during the process, as the cluster already exists at this point
+
 The new cluster is now up and ready. 
 
 Verify System Status
