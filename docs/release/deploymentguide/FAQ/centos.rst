@@ -2,6 +2,8 @@
 How To Update CentOS Kernel
 ***************************
 
+The **recommended** system for Shield is Ubuntu 18.04. It may be installed on CentOS, but this is not the best practice for Shield.
+
 When using CentOS, the Kernel should be updated to 4.4.
 
 To update the kernal, follow these steps: 

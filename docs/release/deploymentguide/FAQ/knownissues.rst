@@ -116,7 +116,8 @@ Save the changes and deploy Shield, run::
 Run Kubernetes On Ubuntu 16.04
 ==============================
 
-In order for Kubernetes to run successfully on a Ubuntu 16.04 system, the OS must be fully updated with the **latest** updates. 
+The **recommended** system for Shield is Ubuntu 18.04. 
+In case a Ubuntu 16.04 system is used, in order for Kubernetes to run successfully on it, the OS must be fully updated with the **latest** updates. 
 To do so, follow these steps (**before** installing Rancher)::
 
 	sudo apt update

@@ -28,15 +28,13 @@ The **maximum** number of cores per node is 24. When there are more than 16 core
 Software Requirements
 ---------------------
 
-*   Linux Ubuntu Server 16.04 or 18.04 (64-bit, not workstation) or CentOS 7.6-1810 (x86) with Kernel 4.4
+*   Linux Ubuntu Server 18.04 (64-bit, not workstation)
 *   Has a fixed IP Address
 *   Has a unique hostname
 *   Has the same timezone (as other machines in the system)
 *   Has SSH server installed
 *   Has an internet connection (DNS and Proxy settings are configured properly)
 *   Locale is EN-US
-
-.. note:: RHEL is also supported. If this is the selected OS, please contact Ericom Shield Professional Services.
 
 In case partitioning is planned (not mandatory for Shield, only optional), here are the recommended sizes for the different partitions:
 
@@ -48,8 +46,6 @@ In case partitioning is planned (not mandatory for Shield, only optional), here 
 .. note:: Other file systems on the server are not used/relevant for Shield, and do not require specific disk allocation. They can all be included under /root.
 
 When using Ubuntu, it is recommended to turn ON the **Ubuntu Security Automatic Updates** on the host server. Further details can be found `here <https://help.ubuntu.com/lts/serverguide/automatic-updates.html>`_.
-
-When using CentOS, if a Kernel update is required, please follow the instructions `here <FAQ/centos.html>`_.
 
 Connectivity
 ------------

@@ -7,7 +7,7 @@ Ericom Shield Architecture
 	:align: center
 
 Ericom Shield includes 5 separate logical components each containing several microservices. These microservices are published as 
-Docker containers on Linux servers (running Ubuntu/CentOS on them).
+Docker containers on Linux Ubuntu servers.
 
 The components can be installed together on a single machine or separated on different machines and locations. Some in the Domain, 
 others in the DMZ - with great flexibility and according to the customers' needs.

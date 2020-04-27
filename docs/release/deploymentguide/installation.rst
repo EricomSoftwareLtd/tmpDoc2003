@@ -5,8 +5,6 @@ Install Shield Using Installation Scripts
 The following process is dedicated to installing Shield using the **Installation Scripts**. It includes steps performed both on the **Rancher Server** Linux 
 machine and on the Rancher user interface (using a browser).
 
-.. note:: When using **Ubuntu 16.04** for a Kubernetes system, some steps are needed for Kubernetes to run successfully. For more details, go `here <../deploymentguide/FAQ/knownissues.html#run-kubernetes-on-ubuntu-16-04>`_.
-
 Prepare The Rancher Server
 ==========================
 

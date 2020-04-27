@@ -2,7 +2,7 @@
 Installation & Deployment
 *************************
 
-Shield can be installed in 2 main methods, using the **Installation Scripts** (suitable for Ubuntu and CentOS) and using the **OVA file** (suitable for Ubuntu).
+Shield can be installed in 2 main methods, using the **Installation Scripts** and using the **OVA file**.
 
 Shield components are deployed on Linux machines using Rancher. Rancher is a well-known software platform that enables easy 
 deployment and management of Docker and Kubernetes products in production environments.

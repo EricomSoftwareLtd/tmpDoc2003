@@ -23,7 +23,7 @@ E.g. a Shield system of 5 nodes (3 managers, 2 browser farm) with RancherHA will
 Software Requirements
 ---------------------
 
-*   Linux Ubuntu Server 18.04 (64-bit, not workstation) or CentOS 7.7-1908 (x86) with Kernel 4.4
+*   Linux Ubuntu Server 18.04 (64-bit, not workstation)
 *   Has a fixed IP Address
 *   Has a unique hostname
 *   Has the **same** user <USER> and password as the other nodes
