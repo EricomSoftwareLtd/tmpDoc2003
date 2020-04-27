@@ -55,7 +55,7 @@ Scroll down to the bottom of the page, mark the required checkboxes (according t
 (using the **Copy to Clipboard** option in the right).
 
 .. figure:: images/rancher2.png
-	:scale: 70%
+	:scale: 55%
 	:align: center
 
 Run the copied command on **EACH** server node to join it to the cluster. Make sure the copied command matches the 
