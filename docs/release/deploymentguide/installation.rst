@@ -5,6 +5,8 @@ Install Shield Using Installation Scripts
 The following process is dedicated to installing Shield using the **Installation Scripts**. It includes steps performed both on the **Rancher Server** Linux 
 machine and on the Rancher user interface (using a browser).
 
+Before you begin, follow the steps detailed in `Machine Preparation <preparation.html>`_.
+
 Prepare The Rancher Server
 ==========================
 

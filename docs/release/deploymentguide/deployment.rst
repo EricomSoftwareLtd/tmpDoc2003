@@ -13,6 +13,10 @@ The **Rancher Server** can be a separated machine or on one of the Master machin
 
 For High Availability deployments (recommended), 3 Master (cluster management) machines are required.
 
+Before starting the installation process, prepare the nodes according to the requirements:
+
+*   `Node Preparation <preparation.html>`_
+
 When installing using the **OVA**, some steps can be skipped (due to the components that are included in the OVA). 
 For detailed instructions on installing using the OVA go to:
 

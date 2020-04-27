@@ -49,40 +49,12 @@ Browse to the location of the OVA file and select it. Click ``Next``
 	:scale: 75%
 	:align: center
 
-6.	Login using: **ericom/ericomshield**
+6.	Follow the steps detailed in `Machine Preparation <preparation.html>`_
 
-7.	Configure the IP of the machine to be unique and **static**:
+7.	If required, increase the size of the OS (to match the VMware size). Run::
 
-	*	Go to /etc/systemd/network
-
-	*	Edit the 20-wired.network file. Change the line with **DHCP=ipv4** to refer to a specific IP address/subnet, for example::
-
-			[Match]
-			Name=en*
-	
-			[Network]
-			Address=10.1.10.12/24
-			Gateway=10.1.10.1
-			DNS=10.1.10.1
-			DNS=10.1.10.2 	//optional, multiples may be used
-			IPForward=ipv4
-
-.. note:: In case a DHCP server exists in the environment, configure it to lease a reserved (static) IP to the OVA. You should be able to determine the MAC address of the OVA by the IP address given the OVA at first startup.
-
-8.  All the machines should be synchronized. Configure the NTP (Network Time Protocol) and the timezone on the machine::
-
-		sudo timedatectl set-ntp on
-		sudo systemctl restart systemd-timesyncd
-		timedatectl set-timezone <Continent>/<City>
-
-9.	Rename each node with a **unique** name (necessary for the cluster to be created properly). As **root**, run::
-
-		hostnamectl set-hostname NEW_UNIQUE_HOSTNAME
-		reboot
-		
-10.	Reboot the machine
-
-Repeat these steps for **EACH** machine in the system. 
+		growpart /dev/sda1
+		resize2fs /dev/sda1
 
 Prepare The Rancher Server
 ==========================
