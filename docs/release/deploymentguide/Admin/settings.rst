@@ -411,12 +411,12 @@ File Sanitization URL
 
 Set a URL to be used for this CDR solution. Multiple URLs may be defined, seperated with a comma (","). This is optional, for high availability purposes.
 
-In Production, update the URL to point to https://CDRServerIPAddress
+In Production, update the URL to point to https://CDRServerIPAddress:8008
 
 Activation Key
 --------------
 
-This provider requires an activation key in order to connect and use the CDR cloud-based solution. Enter the key provided by Opswat to use this CDR solution.
+This is an **optional** field, which should include the API Key, in case such key exists.
 
 Named Policies
 ==============
