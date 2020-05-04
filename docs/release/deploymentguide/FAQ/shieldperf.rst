@@ -27,7 +27,7 @@ To use the Page Load Analyzer, open a Shield browser and go to http://shield-per
 Reading The Analyzer Results
 ============================
 
-The results can be divided into 2 segments: **local browser** to **Shield proxy** (in yellow) and *Remote browser** 
+The results can be divided into 2 segments: **Local Browser** to **Shield Proxy** (in yellow) and **Remote Browser** 
 to the **Internet** (in blue).
 
 Local Browser to Shield Proxy
