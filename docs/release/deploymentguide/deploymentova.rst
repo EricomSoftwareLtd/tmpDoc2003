@@ -11,7 +11,7 @@ Prerequisites
 
 VMware vSphere versions 4, 5 or 6 with the following hardware `requirements <requirements.html#hardware-requirements>`_.
 
-Download the OVA file from `here <https://shield-ova.s3.amazonaws.com/shield-kube-rel-20.03.ova>`_.
+Download the OVA file from `here <https://shield-ova.s3.amazonaws.com/shield-kube-Rel-20.03.ova>`_.
 
 Follow the instructions in the following links according to the required installation type.
 
