@@ -67,6 +67,10 @@ Final result should look like this:
 	:scale: 55%
 	:align: center
 
+Re-deploy Shield. Run::
+
+	sudo ./deploy-shield.sh
+
 Ports
 =====
 
